@@ -16,13 +16,9 @@
   --text: #e2ecf8;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg-1);
@@ -32,16 +28,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-1); }
 ::-webkit-scrollbar-thumb { background: rgba(76,201,240,0.22); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(76,201,240,0.42); }
 
-/* Selection */
 ::selection { background: rgba(76,201,240,0.22); color: #fff; }
 
-/* Badge bounce animation */
+/* Badge bounce */
 @keyframes badgeBounce {
   0%   { transform: translateY(0) scale(1); }
   30%  { transform: translateY(-10px) scale(1.06); }
@@ -50,42 +44,30 @@ body {
   90%  { transform: translateY(-2px) scale(1.01); }
   100% { transform: translateY(0) scale(1); }
 }
+.badge-bounce { animation: badgeBounce 0.65s cubic-bezier(0.36,0.07,0.19,0.97); }
 
-.badge-bounce {
-  animation: badgeBounce 0.65s cubic-bezier(0.36,0.07,0.19,0.97);
+/* Scroll-reveal — popup rise only */
+@keyframes popRise {
+  0%   { opacity: 0; transform: translateY(44px) scale(0.96); }
+  55%  { transform: translateY(-6px) scale(1.01); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* Scroll-reveal animations */
-@keyframes slideFromLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes slideFromRight {
-  from { opacity: 0; transform: translateX(60px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
 @keyframes riseFromBottom {
-  from { opacity: 0; transform: translateY(48px) scale(0.97); }
+  from { opacity: 0; transform: translateY(50px) scale(0.97); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
-@keyframes popIn {
-  0%   { opacity: 0; transform: scale(0.88) translateY(24px); }
-  60%  { transform: scale(1.03) translateY(-4px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
-}
 
-.anim-left  { animation: slideFromLeft  0.65s cubic-bezier(0.22,1,0.36,1) both; }
-.anim-right { animation: slideFromRight 0.65s cubic-bezier(0.22,1,0.36,1) both; }
-.anim-rise  { animation: riseFromBottom 0.7s  cubic-bezier(0.22,1,0.36,1) both; }
-.anim-pop   { animation: popIn          0.6s  cubic-bezier(0.22,1,0.36,1) both; }
+.anim-pop  { animation: popRise       0.85s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-rise { animation: riseFromBottom 0.9s cubic-bezier(0.22,1,0.36,1) both; }
 
-/* Stagger delays for children */
-.anim-d1 { animation-delay: 0.05s; }
-.anim-d2 { animation-delay: 0.12s; }
-.anim-d3 { animation-delay: 0.19s; }
-.anim-d4 { animation-delay: 0.26s; }
-.anim-d5 { animation-delay: 0.33s; }
-.anim-d6 { animation-delay: 0.40s; }
+/* Stagger delays */
+.anim-d1 { animation-delay: 0.06s; }
+.anim-d2 { animation-delay: 0.14s; }
+.anim-d3 { animation-delay: 0.22s; }
+.anim-d4 { animation-delay: 0.30s; }
+.anim-d5 { animation-delay: 0.38s; }
+.anim-d6 { animation-delay: 0.46s; }
 
 @layer components {
   .section-card {

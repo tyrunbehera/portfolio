@@ -3,16 +3,16 @@
 import { useInView } from "@/hooks/useInView";
 import { skills } from "@/data/resume";
 
-const DELAYS = ["anim-d1","anim-d2","anim-d3","anim-d4","anim-d5","anim-d6","anim-d7","anim-d8"];
+const DELAYS = ["anim-d1","anim-d2","anim-d3","anim-d4","anim-d5","anim-d6","anim-d1","anim-d2"];
 
 export default function Skills() {
-  const { ref, inView } = useInView(0.1);
+  const { ref, inView } = useInView(0.08);
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} id="skills" className="py-8">
       <div className="max-w-[1220px] mx-auto px-6">
         <div
-          className={`section-card ${inView ? "anim-right" : "opacity-0 translate-x-14"}`}
+          className={`section-card ${inView ? "anim-pop" : "opacity-0 translate-y-10"}`}
           style={{ willChange: "transform, opacity" }}
         >
           <span className="section-label">Technical Skills</span>
@@ -27,7 +27,7 @@ export default function Skills() {
             {skills.map(({ category, items }, i) => (
               <div
                 key={category}
-                className={`rounded-xl border border-[rgba(143,170,200,0.14)] bg-[rgba(10,18,28,0.7)] p-5 hover:border-[rgba(76,201,240,0.22)] transition-colors group ${inView ? `anim-right ${DELAYS[i] ?? ""}` : "opacity-0"}`}
+                className={`rounded-xl border border-[rgba(143,170,200,0.14)] bg-[rgba(10,18,28,0.7)] p-5 hover:border-[rgba(76,201,240,0.22)] transition-colors ${inView ? `anim-pop ${DELAYS[i] ?? ""}` : "opacity-0"}`}
               >
                 <p className="text-[0.65rem] uppercase tracking-[0.14em] text-[#4cc9f0] font-bold mb-3 flex items-center gap-2">
                   <span className="w-1 h-3 rounded-full bg-[#4cc9f0] inline-block" />

@@ -6,13 +6,13 @@ import { whatIDo } from "@/data/resume";
 const DELAYS = ["anim-d1","anim-d2","anim-d3","anim-d4","anim-d5","anim-d6"];
 
 export default function WhatIDo() {
-  const { ref, inView } = useInView(0.12);
+  const { ref, inView } = useInView(0.1);
 
   return (
     <section ref={ref as React.RefObject<HTMLElement>} className="pt-0 pb-8">
       <div className="max-w-[1220px] mx-auto px-6">
         <div
-          className={`section-card transition-none ${inView ? "anim-left" : "opacity-0 -translate-x-14"}`}
+          className={`section-card ${inView ? "anim-pop" : "opacity-0 translate-y-10"}`}
           style={{ willChange: "transform, opacity" }}
         >
           <span className="section-label">What I Do</span>
@@ -27,7 +27,7 @@ export default function WhatIDo() {
             {whatIDo.map(({ icon, tag, title, description, tools }, i) => (
               <div
                 key={title}
-                className={`group rounded-2xl border border-[rgba(143,170,200,0.14)] bg-[rgba(10,18,28,0.7)] p-5 hover:border-[rgba(76,201,240,0.25)] hover:bg-[rgba(10,22,36,0.88)] transition-colors duration-300 hover:-translate-y-0.5 flex flex-col gap-3 ${inView ? `anim-left ${DELAYS[i] ?? ""}` : "opacity-0"}`}
+                className={`group rounded-2xl border border-[rgba(143,170,200,0.14)] bg-[rgba(10,18,28,0.7)] p-5 hover:border-[rgba(76,201,240,0.25)] hover:bg-[rgba(10,22,36,0.88)] transition-colors duration-300 flex flex-col gap-3 ${inView ? `anim-pop ${DELAYS[i] ?? ""}` : "opacity-0"}`}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-[rgba(76,201,240,0.08)] border border-[rgba(76,201,240,0.14)] flex items-center justify-center text-base shrink-0">
