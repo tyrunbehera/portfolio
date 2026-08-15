@@ -145,8 +145,7 @@ export const experience = [
   {
     role: "DevOps Engineer",
     company: "GemGem",
-    location: "Surat, Gujarat",
-    period: "Nov 2024 – Feb 2026",
+    location: "Hong Kong SAR",
     current: false,
     summary: "Sole DevOps owner for a high-traffic e-commerce platform running on AWS ECS and Cloudways.",
     bullets: [
@@ -162,8 +161,7 @@ export const experience = [
   {
     role: "DevOps Engineer",
     company: "CirrOps",
-    location: "Surat, Gujarat",
-    period: "Jan 2022 – Oct 2024",
+    location: "Bahrain",
     current: false,
     summary: "Built and maintained cloud infrastructure and CI/CD pipelines across multiple client projects.",
     bullets: [
