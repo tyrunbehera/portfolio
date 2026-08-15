@@ -92,9 +92,9 @@ export default function Hero() {
               <p className="text-xl font-semibold text-[#4cc9f0] mb-2">{personal.headline}</p>
               <p className="text-sm text-[#a7bbd2] leading-relaxed max-w-xl">{personal.tagline}</p>
               <div className="flex flex-wrap gap-3 mt-5">
-                <a href={`mailto:${personal.email}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#4cc9f0] text-[#010b14] font-bold text-sm hover:bg-[#38b8de] transition-colors shadow-[0_4px_20px_rgba(76,201,240,0.3)]">Email Me</a>
-                <a href={personal.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[rgba(76,201,240,0.3)] text-[#4cc9f0] font-semibold text-sm hover:bg-[rgba(76,201,240,0.1)] transition-colors">LinkedIn ↗</a>
-                <a href={personal.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[rgba(143,170,200,0.2)] text-[#a7bbd2] font-semibold text-sm hover:bg-[rgba(255,255,255,0.04)] transition-colors">GitHub ↗</a>
+                <a href={`mailto:${personal.email}`} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#4cc9f0] text-[#010b14] font-bold text-sm hover:bg-[#38b8de] transition-colors shadow-[0_4px_20px_rgba(76,201,240,0.3)] anim-left anim-d1">Email Me</a>
+                <a href={personal.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[rgba(76,201,240,0.3)] text-[#4cc9f0] font-semibold text-sm hover:bg-[rgba(76,201,240,0.1)] transition-colors anim-left anim-d2">LinkedIn ↗</a>
+                <a href={personal.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[rgba(143,170,200,0.2)] text-[#a7bbd2] font-semibold text-sm hover:bg-[rgba(255,255,255,0.04)] transition-colors anim-left anim-d3">GitHub ↗</a>
               </div>
             </div>
 
