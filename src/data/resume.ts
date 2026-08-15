@@ -13,7 +13,7 @@ export const personal = {
   dob: "01 October 2000",
   languages: ["English", "Hindi", "Odia", "Gujarati", "Marathi"],
   linkedin: "https://www.linkedin.com/in/tarun-behera-86a343235",
-  github: "https://github.com/TarunBehera",
+  github: "https://github.com/tyrunbehera",
   about: [
     "I am a DevOps Engineer with 4 years of experience building cloud platforms that are secure, automated, and built to scale. My core focus is AWS infrastructure, CI/CD pipelines, container orchestration, and cloud security. I enjoy taking ownership of complex infrastructure problems and turning them into clean, reliable systems.",
     "At every company I have worked with, I have gone deep on the tools that matter most: Terraform for infrastructure as code, Kubernetes for container workloads, GitHub Actions and GitLab CI/CD for delivery pipelines, and Datadog, Grafana, and Prometheus for observability. Security is never bolted on at the end. I embed Trivy, TruffleHog, and OWASP ZAP directly into the pipeline so issues are caught before they reach production.",

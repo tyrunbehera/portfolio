@@ -25,7 +25,7 @@ const contactItems = [
   },
   {
     label: "GitHub",
-    value: "github.com/TarunBehera",
+    value: "github.com/tyrunbehera",
     href: personal.github,
     description: "Projects & open-source work",
     accent: "#a7bbd2",
